@@ -2,11 +2,205 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=https://olivier3dprint.github.io/GravityFlip/">
-<link rel="canonical" href="https://olivier3dprint.github.io/GravityFlip/">
-<title>Gravity Flip</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olivier Popiers – Applications Android</title>
+<meta name="description" content="Les jeux et applications Android d'Olivier Popiers disponibles sur Google Play.">
+<link rel="canonical" href="https://olivier3dprint.github.io/">
+<style>
+  :root {
+    --bg: #f4f5f7;
+    --card: #ffffff;
+    --text: #1c1e21;
+    --muted: #5f6368;
+    --border: #e2e4e8;
+    --accent: #01875f;
+    --accent-text: #ffffff;
+    --chip: #eef1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131417;
+      --card: #1d1f23;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --border: #2e3136;
+      --accent: #36b37e;
+      --accent-text: #0b1a13;
+      --chip: #2a2d32;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 48px 16px 32px; }
+  header h1 { margin: 0 0 6px; font-size: clamp(1.6rem, 4vw, 2.2rem); }
+  header p { margin: 0; color: var(--muted); }
+  h2 {
+    margin: 40px 0 16px;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  .app {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .top { display: flex; gap: 14px; align-items: center; }
+  .top img { width: 64px; height: 64px; border-radius: 14px; flex: none; }
+  .top h3 { margin: 0; font-size: 1.1rem; }
+  .chip {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 1px 10px;
+    border-radius: 999px;
+    background: var(--chip);
+    color: var(--muted);
+    font-size: .8rem;
+  }
+  .app p { margin: 0; flex: 1; }
+  .links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .links a {
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .play { background: var(--accent); color: var(--accent-text); }
+  .site { border: 1px solid var(--border); color: var(--text); }
+  .links a:hover { filter: brightness(1.08); }
+  footer { margin-top: 48px; color: var(--muted); font-size: .85rem; text-align: center; }
+  footer a { color: inherit; }
+</style>
 </head>
 <body>
-<p>Redirection vers <a href="https://olivier3dprint.github.io/GravityFlip/">Gravity Flip</a>…</p>
+<div class="wrap">
+  <header>
+    <h1>Applications Android</h1>
+    <p>Jeux et outils développés par Olivier Popiers, disponibles gratuitement sur Google Play.</p>
+  </header>
+
+  <h2>Jeux</h2>
+  <div class="grid">
+    <article class="app">
+      <div class="top">
+        <img src="icons/gravityflip.png" alt="">
+        <div><h3>Gravity Flip</h3><span class="chip">Arcade</span></div>
+      </div>
+      <p>Touchez l'écran pour inverser la gravité et guider la bille dans un tunnel toujours plus rapide. Quatre modes de jeu et un défi quotidien.</p>
+      <div class="links">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.olivier.gravityflip">Google Play</a>
+        <a class="site" href="GravityFlip/">Site</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="top">
+        <img src="icons/vaguezero.png" alt="">
+        <div><h3>Vague Zéro</h3><span class="chip">Arcade</span></div>
+      </div>
+      <p>Un shoot'em up vertical où les vagues ennemies esquivent vos tirs. Améliorations en temps réel et boss qui se désassemblent.</p>
+      <div class="links">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.olivier.vaguezero">Google Play</a>
+        <a class="site" href="VagueZero/">Site</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="top">
+        <img src="icons/jeudelaroute.png" alt="">
+        <div><h3>Jeu de la route</h3><span class="chip">Quiz</span></div>
+      </div>
+      <p>Codes pays des plaques, départements français et capitales européennes : un quiz où une seule erreur met fin à la série.</p>
+      <div class="links">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.olivier.jeudelaroute">Google Play</a>
+        <a class="site" href="JeuDeLaRoute/">Site</a>
+      </div>
+    </article>
+  </div>
+
+  <h2>Applications</h2>
+  <div class="grid">
+    <article class="app">
+      <div class="top">
+        <img src="icons/pdfeclair.png" alt="">
+        <div><h3>PDF Éclair</h3><span class="chip">Productivité</span></div>
+      </div>
+      <p>Scanner de documents avec détection des bords, redressement et OCR, entièrement hors ligne et sans compte.</p>
+      <div class="links">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.pdfeclair.app">Google Play</a>
+        <a class="site" href="PDFEclair/">Site</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="top">
+        <img src="icons/photocalc.png" alt="">
+        <div><h3>PhotoCalc</h3><span class="chip">Photographie</span></div>
+      </div>
+      <p>Les calculs techniques du photographe : règle des 500 et NPF, hyperfocale, profondeur de champ, champ de vision, séquences.</p>
+      <div class="links">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.photocalc.app">Google Play</a>
+        <a class="site" href="PhotoCalcSite/">Site</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="top">
+        <img src="icons/eclipsegps.png" alt="">
+        <div><h3>EclipseGPS</h3><span class="chip">Enseignement</span></div>
+      </div>
+      <p>La prochaine éclipse solaire ou lunaire visible depuis votre position : obscurcissement, horaires des contacts et compte à rebours.</p>
+      <div class="links">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.eclipsegps.app">Google Play</a>
+        <a class="site" href="EclipseGPSPublic/">Site</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="top">
+        <img src="icons/tagemage.png" alt="">
+        <div><h3>Entraînement Tage Mage</h3><span class="chip">Enseignement</span></div>
+      </div>
+      <p>Entraînement au calcul mental du Tage Mage : tables, carrés, cubes et conversion lettre → chiffre, avec un mode global chronométré.</p>
+      <div class="links">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.olivier.entrainementtagemage">Google Play</a>
+        <a class="site" href="tagemageinfo/">Site</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="top">
+        <img src="icons/calculatrice.png" alt="">
+        <div><h3>Calculatrice heure minute sec.</h3><span class="chip">Outils</span></div>
+      </div>
+      <p>Additionnez et soustrayez des durées en heures, minutes et secondes en un instant.</p>
+      <div class="links">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.masociete.calc_heure">Google Play</a>
+        <a class="site" href="Calculatrice/">Site</a>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <a href="https://play.google.com/store/apps/developer?id=Olivier+Popiers">Toutes les applications sur Google Play</a>
+  </footer>
+</div>
 </body>
 </html>
