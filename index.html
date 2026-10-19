@@ -383,7 +383,7 @@
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     line-height: 1.5;
   }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 48px 16px 32px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 32px; }
   header h1 { margin: 0 0 6px; font-size: clamp(1.6rem, 4vw, 2.2rem); }
   header p { margin: 0; color: var(--muted); }
   h2 {
@@ -431,28 +431,49 @@
   .play { background: var(--accent); color: var(--accent-text); }
   .site { border: 1px solid var(--border); color: var(--text); }
   .links a:hover { filter: brightness(1.08); }
+  html:not([data-lang="en"]) .txt-en { display: none; }
+  html[data-lang="en"] .txt-fr { display: none; }
+  nav { display: flex; justify-content: flex-end; margin-bottom: 16px; }
+  #bouton-langue {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font: inherit;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #bouton-langue:hover { border-color: var(--accent); }
   footer { margin-top: 48px; color: var(--muted); font-size: .85rem; text-align: center; }
   footer a { color: inherit; }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav>
+    <button id="bouton-langue" type="button">LANGUAGE: ENGLISH</button>
+  </nav>
   <header>
-    <h1>Applications Android gratuites</h1>
-    <p>Jeux et outils développés par Olivier Popiers, disponibles gratuitement sur Google Play.</p>
+    <h1><span class="txt-fr">Applications Android gratuites</span><span class="txt-en">Free Android apps</span></h1>
+    <p class="txt-fr">Jeux et outils développés par Olivier Popiers, disponibles gratuitement sur Google Play.</p>
+    <p class="txt-en">Games and tools made by Olivier Popiers, available for free on Google Play.</p>
   </header>
 
-  <h2>Jeux</h2>
+  <h2><span class="txt-fr">Jeux</span><span class="txt-en">Games</span></h2>
   <div class="grid">
     <article class="app">
       <div class="top">
         <img src="icons/gravityflip.png" alt="Icône de l'application Gravity Flip" width="64" height="64" loading="lazy">
         <div><h3>Gravity Flip</h3><span class="chip">Arcade</span></div>
       </div>
-      <p>Touchez l'écran pour inverser la gravité et guider la bille dans un tunnel toujours plus rapide. Quatre modes de jeu et un défi quotidien.</p>
+      <p class="txt-fr">Touchez l'écran pour inverser la gravité et guider la bille dans un tunnel toujours plus rapide. Quatre modes de jeu et un défi quotidien.</p>
+      <p class="txt-en">Tap the screen to flip gravity and guide the ball through an ever-faster tunnel. Four game modes and a daily challenge.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.olivier.gravityflip">Google Play</a>
-        <a class="site" href="GravityFlip/">Site</a>
+        <a class="site" href="GravityFlip/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
 
@@ -461,10 +482,11 @@
         <img src="icons/vaguezero.png" alt="Icône de l'application Vague Zéro" width="64" height="64" loading="lazy">
         <div><h3>Vague Zéro</h3><span class="chip">Arcade</span></div>
       </div>
-      <p>Un shoot'em up vertical où les vagues ennemies esquivent vos tirs. Améliorations en temps réel et boss qui se désassemblent.</p>
+      <p class="txt-fr">Un shoot'em up vertical où les vagues ennemies esquivent vos tirs. Améliorations en temps réel et boss qui se désassemblent.</p>
+      <p class="txt-en">A vertical shoot'em up where enemy waves dodge your shots. Real-time upgrades and bosses that break apart.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.olivier.vaguezero">Google Play</a>
-        <a class="site" href="VagueZero/">Site</a>
+        <a class="site" href="VagueZero/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
 
@@ -473,127 +495,173 @@
         <img src="icons/jeudelaroute.png" alt="Icône de l'application Jeu de la route" width="64" height="64" loading="lazy">
         <div><h3>Jeu de la route</h3><span class="chip">Quiz</span></div>
       </div>
-      <p>Codes pays des plaques, départements français et capitales européennes : un quiz où une seule erreur met fin à la série.</p>
+      <p class="txt-fr">Codes pays des plaques, départements français et capitales européennes : un quiz où une seule erreur met fin à la série.</p>
+      <p class="txt-en">Licence plate country codes, French departments and European capitals: a quiz where a single mistake ends your streak.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.olivier.jeudelaroute">Google Play</a>
-        <a class="site" href="JeuDeLaRoute/">Site</a>
+        <a class="site" href="JeuDeLaRoute/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
   </div>
 
-  <h2>Applications</h2>
+  <h2><span class="txt-fr">Applications</span><span class="txt-en">Apps</span></h2>
   <div class="grid">
     <article class="app">
       <div class="top">
         <img src="icons/pdfeclair.png" alt="Icône de l'application PDF Éclair" width="64" height="64" loading="lazy">
-        <div><h3>PDF Éclair</h3><span class="chip">Productivité</span></div>
+        <div><h3>PDF Éclair</h3><span class="chip"><span class="txt-fr">Productivité</span><span class="txt-en">Productivity</span></span></div>
       </div>
-      <p>Scanner de documents avec détection des bords, redressement et OCR, entièrement hors ligne et sans compte.</p>
+      <p class="txt-fr">Scanner de documents avec détection des bords, redressement et OCR, entièrement hors ligne et sans compte.</p>
+      <p class="txt-en">Document scanner with edge detection, perspective correction and OCR, fully offline and with no account.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.pdfeclair.app">Google Play</a>
-        <a class="site" href="PDFEclair/">Site</a>
+        <a class="site" href="PDFEclair/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
 
     <article class="app">
       <div class="top">
         <img src="icons/photocalc.png" alt="Icône de l'application PhotoCalc" width="64" height="64" loading="lazy">
-        <div><h3>PhotoCalc</h3><span class="chip">Photographie</span></div>
+        <div><h3>PhotoCalc</h3><span class="chip"><span class="txt-fr">Photographie</span><span class="txt-en">Photography</span></span></div>
       </div>
-      <p>Les calculs techniques du photographe : règle des 500 et NPF, hyperfocale, profondeur de champ, champ de vision, séquences.</p>
+      <p class="txt-fr">Les calculs techniques du photographe : règle des 500 et NPF, hyperfocale, profondeur de champ, champ de vision, séquences.</p>
+      <p class="txt-en">The photographer's technical calculations: 500 and NPF rules, hyperfocal distance, depth of field, field of view, sequences.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.photocalc.app">Google Play</a>
-        <a class="site" href="PhotoCalcSite/">Site</a>
+        <a class="site" href="PhotoCalcSite/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
 
     <article class="app">
       <div class="top">
         <img src="icons/eclipsegps.png" alt="Icône de l'application EclipseGPS" width="64" height="64" loading="lazy">
-        <div><h3>EclipseGPS</h3><span class="chip">Enseignement</span></div>
+        <div><h3>EclipseGPS</h3><span class="chip"><span class="txt-fr">Enseignement</span><span class="txt-en">Education</span></span></div>
       </div>
-      <p>La prochaine éclipse solaire ou lunaire visible depuis votre position : obscurcissement, horaires des contacts et compte à rebours.</p>
+      <p class="txt-fr">La prochaine éclipse solaire ou lunaire visible depuis votre position : obscurcissement, horaires des contacts et compte à rebours.</p>
+      <p class="txt-en">The next solar or lunar eclipse visible from your location: obscuration, contact times and countdown.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.eclipsegps.app">Google Play</a>
-        <a class="site" href="EclipseGPSPublic/">Site</a>
+        <a class="site" href="EclipseGPSPublic/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
 
     <article class="app">
       <div class="top">
         <img src="icons/tagemage.png" alt="Icône de l'application Entraînement Tage Mage" width="64" height="64" loading="lazy">
-        <div><h3>Entraînement Tage Mage</h3><span class="chip">Enseignement</span></div>
+        <div><h3>Entraînement Tage Mage</h3><span class="chip"><span class="txt-fr">Enseignement</span><span class="txt-en">Education</span></span></div>
       </div>
-      <p>Entraînement au calcul mental du Tage Mage : tables, carrés, cubes et conversion lettre → chiffre, avec un mode global chronométré.</p>
+      <p class="txt-fr">Entraînement au calcul mental du Tage Mage : tables, carrés, cubes et conversion lettre → chiffre, avec un mode global chronométré.</p>
+      <p class="txt-en">Mental arithmetic training for the Tage Mage test: times tables, squares, cubes and letter → number conversion, with a timed overall mode.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.olivier.entrainementtagemage">Google Play</a>
-        <a class="site" href="tagemageinfo/">Site</a>
+        <a class="site" href="tagemageinfo/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
 
     <article class="app">
       <div class="top">
         <img src="icons/calculatrice.png" alt="Icône de l'application Calculatrice heure minute sec." width="64" height="64" loading="lazy">
-        <div><h3>Calculatrice heure minute sec.</h3><span class="chip">Outils</span></div>
+        <div><h3>Calculatrice heure minute sec.</h3><span class="chip"><span class="txt-fr">Outils</span><span class="txt-en">Tools</span></span></div>
       </div>
-      <p>Additionnez et soustrayez des durées en heures, minutes et secondes en un instant.</p>
+      <p class="txt-fr">Additionnez et soustrayez des durées en heures, minutes et secondes en un instant.</p>
+      <p class="txt-en">Add and subtract durations in hours, minutes and seconds in an instant.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.masociete.calc_heure">Google Play</a>
-        <a class="site" href="Calculatrice/">Site</a>
+        <a class="site" href="Calculatrice/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
 
     <article class="app">
       <div class="top">
         <img src="icons/bambutag.png" alt="Icône de l'application Bambu Tag" width="64" height="64" loading="lazy">
-        <div><h3>Bambu Tag</h3><span class="chip">Outils</span></div>
+        <div><h3>Bambu Tag</h3><span class="chip"><span class="txt-fr">Outils</span><span class="txt-en">Tools</span></span></div>
       </div>
-      <p>Lisez les tags NFC des bobines Bambu Lab et réutilisez-les : URL, Wi-Fi, contact, GPS, application.</p>
+      <p class="txt-fr">Lisez les tags NFC des bobines Bambu Lab et réutilisez-les : URL, Wi-Fi, contact, GPS, application.</p>
+      <p class="txt-en">Read the NFC tags on Bambu Lab spools and reuse them: URL, Wi-Fi, contact, GPS, app.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.olivier.bambutag">Google Play</a>
-        <a class="site" href="BambuTag/">Site</a>
+        <a class="site" href="BambuTag/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
 
     <article class="app">
       <div class="top">
         <img src="icons/sans.png" alt="Icône de l'application Sans…" width="64" height="64" loading="lazy">
-        <div><h3>Sans…</h3><span class="chip">Bien-être</span></div>
+        <div><h3>Sans…</h3><span class="chip"><span class="txt-fr">Bien-être</span><span class="txt-en">Wellbeing</span></span></div>
       </div>
-      <p>Le compteur de jours qui vous aide à tenir : tabac, alcool, sucre, écrans, achats… ou toute habitude que vous voulez laisser derrière vous.</p>
+      <p class="txt-fr">Le compteur de jours qui vous aide à tenir : tabac, alcool, sucre, écrans, achats… ou toute habitude que vous voulez laisser derrière vous.</p>
+      <p class="txt-en">The day counter that helps you hold on: smoking, alcohol, sugar, screens, shopping… or any habit you want to leave behind.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.sans.app">Google Play</a>
-        <a class="site" href="sans/">Site</a>
+        <a class="site" href="sans/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
 
     <article class="app">
       <div class="top">
         <img src="icons/qrclair.png" alt="Icône de l'application QR Clair" width="64" height="64" loading="lazy">
-        <div><h3>QR Clair</h3><span class="chip">Outils</span></div>
+        <div><h3>QR Clair</h3><span class="chip"><span class="txt-fr">Outils</span><span class="txt-en">Tools</span></span></div>
       </div>
-      <p>Scannez et créez des QR codes et codes-barres. Alerte sur les liens suspects, QR codes en forme de cœur, hors ligne, sans compte.</p>
+      <p class="txt-fr">Scannez et créez des QR codes et codes-barres. Alerte sur les liens suspects, QR codes en forme de cœur, hors ligne, sans compte.</p>
+      <p class="txt-en">Scan and create QR codes and barcodes. Warnings on suspicious links, heart-shaped QR codes, offline, no account.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.qrclair.app">Google Play</a>
-        <a class="site" href="QRClair/">Site</a>
+        <a class="site" href="QRClair/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
     <article class="app">
       <div class="top">
         <img src="icons/compresse.png" alt="Icône de l'application Compresse" width="64" height="64" loading="lazy">
-        <div><h3>Compresse</h3><span class="chip">Outils</span></div>
+        <div><h3>Compresse</h3><span class="chip"><span class="txt-fr">Outils</span><span class="txt-en">Tools</span></span></div>
       </div>
-      <p>Réduisez le poids de vos vidéos et photos, 100 % sur votre téléphone. Aucun envoi sur un serveur, originaux jamais écrasés, traitement par lots.</p>
+      <p class="txt-fr">Réduisez le poids de vos vidéos et photos, 100 % sur votre téléphone. Aucun envoi sur un serveur, originaux jamais écrasés, traitement par lots.</p>
+      <p class="txt-en">Shrink your videos and photos, 100% on your phone. Nothing sent to a server, originals never overwritten, batch processing.</p>
       <div class="links">
         <a class="play" href="https://play.google.com/store/apps/details?id=com.compresse.app">Google Play</a>
-        <a class="site" href="CompresseSite/">Site</a>
+        <a class="site" href="CompresseSite/"><span class="txt-fr">Site</span><span class="txt-en">Website</span></a>
       </div>
     </article>
   </div>
 
   <footer>
-    <a href="https://play.google.com/store/apps/developer?id=Olivier+Popiers">Toutes les applications sur Google Play</a>
+    <a href="https://play.google.com/store/apps/developer?id=Olivier+Popiers"><span class="txt-fr">Toutes les applications sur Google Play</span><span class="txt-en">All apps on Google Play</span></a>
   </footer>
 </div>
+
+<script>
+(function () {
+  var html = document.documentElement;
+  var bouton = document.getElementById('bouton-langue');
+  var titres = {
+    fr: 'Applications Android gratuites : jeux, scanner PDF, QR code – Olivier Popiers',
+    en: 'Free Android apps: games, PDF scanner, QR code – Olivier Popiers'
+  };
+  var liensSites = document.querySelectorAll('a.site');
+  var liensPlay = document.querySelectorAll('a.play');
+
+  function appliquer(langue) {
+    html.setAttribute('data-lang', langue);
+    html.setAttribute('lang', langue);
+    document.title = titres[langue];
+    bouton.textContent = langue === 'en' ? 'LANGUE : FRANÇAIS' : 'LANGUAGE: ENGLISH';
+    // Les sites des applications et Google Play s'ouvrent dans la même langue.
+    liensSites.forEach(function (a) {
+      a.href = a.getAttribute('href').split('?')[0] + (langue === 'en' ? '?lang=en' : '');
+    });
+    liensPlay.forEach(function (a) {
+      a.href = a.getAttribute('href').replace(/&hl=\w+$/, '') + '&hl=' + langue;
+    });
+  }
+
+  // ?lang=en force l'anglais ; sinon on suit la langue du navigateur.
+  var demande = new URLSearchParams(window.location.search).get('lang');
+  var navigateur = (navigator.language || 'fr').toLowerCase();
+  appliquer(demande === 'en' || demande === 'fr' ? demande : (navigateur.indexOf('fr') === 0 ? 'fr' : 'en'));
+
+  bouton.addEventListener('click', function () {
+    appliquer(html.getAttribute('data-lang') === 'en' ? 'fr' : 'en');
+  });
+})();
+</script>
 </body>
 </html>
