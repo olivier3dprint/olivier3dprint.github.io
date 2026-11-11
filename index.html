@@ -736,6 +736,7 @@
 
   <footer>
     <a href="https://play.google.com/store/apps/developer?id=Olivier+Popiers"><span class="txt-fr">Toutes les applications sur Google Play</span><span class="txt-en">All apps on Google Play</span></a>
+    · <a class="cgu" href="conditions/"><span class="txt-fr">Conditions d'utilisation</span><span class="txt-en">Terms of use</span></a>
   </footer>
 </div>
 
@@ -762,6 +763,7 @@
     liensPlay.forEach(function (a) {
       a.href = a.getAttribute('href').replace(/&hl=\w+$/, '') + '&hl=' + langue;
     });
+    document.querySelector('a.cgu').href = 'conditions/' + (langue === 'en' ? '?lang=en' : '');
   }
 
   // ?lang=en force l'anglais ; sinon on suit la langue du navigateur.
